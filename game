@@ -8,7 +8,7 @@ def handel_room():
 	print "Oh je, oh nein! A Verdi Badstraße Pianino ist hier."
 	print "Eet hast missink keys, und ven du speilst one key you get three piiiiitches."
 	print "The bad old piano is blocking the Bach door."
-	print "I wonder if you could move the piano?"
+	print "I wonder if you could move the piano?" 
 	print "How are you going to move the Große Badstraße Piano?"
 	piano_moved = False
 	
@@ -24,6 +24,7 @@ def handel_room():
 		elif "move" in choice and piano_moved:	
 			dead("The piano fell over. You'll be charged for the damages. You B-flat.")
 		elif "open" in choice and piano_moved:
+			print '-' * 30
 			bach_room()
 		else:
 			print "What was that? Scheiße. Try moving the piano, or opening the door."	
@@ -39,10 +40,12 @@ def bach_room():
 	if choice == "yes":
 		print "Very good! The pianist is Verdi good on the Bach!"
 		print "What about I find you a Beach too?"
+		print '-' * 30
 		beach_room()
 	elif choice == "no":
 		print "Maybe you will like this Beach better?"
 		print "'Let me find you a Beach.'"
+		print '-' * 30
 		beach_room()
 	else:
 		dead("You've gone Kaiseradamn Badstraße. Worse than Sprockets, man.")
@@ -51,14 +54,15 @@ def bach_room():
 
 def beach_room():
 	print "'Mrs. Beach wrote some good stuff.'"
-	print "'Leikweiß, I think you will like the Beach.'"
+	print "'I think you will like the Beach.'"
 	print "'Try this one. The pianist is also good with the Beach.'"	
 	
 	choice = raw_input(">>> ")
 	
 	if "yes" in choice: 
 		print "'Verdi good! You will like the Beach, I'm sure!'"
-		print "'Why don/'t you try some of our other selections as well.'"
+		print "'Why don't you try some of our other selections as well.'"
+		print '-' * 30
 		debussy_room()
 	elif "no" in choice:
 		print "OK, let's find out what you like."
@@ -66,6 +70,7 @@ def beach_room():
 		choice = raw_input(">>> ")
 		if 'sit' in choice:
 			print "Of course! It goes 'Bratschchchchc' when you sit on it!"
+			print '-' * 30
 			debussy_room()
 	else:
 		dead("The floor opens. You fall through followed by a piano. You now B-flat.\n")	
@@ -82,13 +87,15 @@ def debussy_room():
 	
 	if "early" in choice:
 		print "Verdi good! Debussy is best when young!"
+		print '-' * 30
 		gold_room()
 	elif "late" in choice:
 		print "Nah, you wanna get Debussy when it's young."
 		print "Let's try that again."
 		choice = raw_input(">>> ")
 		if "early" in choice:
-			"Verdi good! Debussy is best when young!"
+			print "Verdi good! Debussy is best when young!"
+			print '-' * 30
 			gold_room()
 		else:
 			dead("Oh no! You played a wrong note. Death by conductor deathray stare")	
@@ -99,6 +106,7 @@ def debussy_room():
 		choice = raw_input(">>> ")
 		if "cry" in choice:
 			print "Verdi good! Good job!"
+			print '-' * 30
 			gold_room()
 		else: 
 			dead("Oh no. You really have no sense of humor. You must be a conductor.")			
@@ -113,6 +121,7 @@ def gold_room():
 	choice = raw_input(">>> ")
 	
 	if "Bach" in choice:
+		print '-' * 30
 		print "Yeah, always finish on the Bach! You wïïïïïn! Cöñgrätülätïöñs¡!"
 		exit(0)
 	else: 
@@ -120,6 +129,7 @@ def gold_room():
 			
 def dead(why):
 	print why, "Aufwiedersehen!"
+	print '-' * 30
 	exit(0)
 	
 # Here's where you start 
@@ -137,8 +147,7 @@ def start():
 		print "Learn to read, man. Let's try a joke: "
 		print "How many violists does it take to make a batch of chocolate chip cookies?"
 		choice = raw_input(">>> ")
-		if "0" in choice or "1" in choice:
-			how_much = int(choice)
+		if "twelve" in choice or "12" in choice:
 			print "Good. You can count violists. Let's get you something you can Handel."
 			print '-' * 30
 			handel_room()
@@ -150,15 +159,16 @@ def start():
 		print "I'll ask you again:"
 		choice = raw_input(">>> ")
 		if "Handel" in choice:
+			print '-' * 30
 			handel_room()
 		else:
 			dead("Too bad, you can't Händel music just yet.")	
-		
 	elif choice == "Handel":
+		print '-' * 30
 		handel_room()	
 	else:
 		dead("Better luck next time.")
 		
 #Aaaaaaaand the game. 		
 
-start()	
+start()			
