@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 from sys import exit
@@ -37,7 +38,7 @@ def bach_room():
 	
 	choice = raw_input(">>> ")
 	
-	if choice == "yes":
+	if choice == "yes" or "ok" in choice or "Bach" in choice:
 		print "Very good! The pianist is Verdi good on the Bach!"
 		print "What about I find you a Beach too?"
 		print '-' * 30
