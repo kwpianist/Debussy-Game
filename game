@@ -60,7 +60,7 @@ def beach_room():
 	
 	choice = raw_input(">>> ")
 	
-	if "yes" in choice: 
+	if "yes" or "ok" in choice: 
 		print "'Verdi good! You will like the Beach, I'm sure!'"
 		print "'Why don't you try some of our other selections as well.'"
 		print '-' * 30
