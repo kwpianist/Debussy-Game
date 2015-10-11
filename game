@@ -121,7 +121,7 @@ def gold_room():
 	
 	choice = raw_input(">>> ")
 	
-	if "Bach" in choice:
+	if "Bach" or "bach" in choice:
 		print '-' * 30
 		print "Yeah, always finish on the Bach! You wïïïïïn! Cöñgrätülätïöñs¡!"
 		exit(0)
